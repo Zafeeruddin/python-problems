@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(input())
+g=[]
+h=[]
+f=str(input())
+b=f.split()
+d=set(b)
+b=list(d)
+l=[eval(i) for i in b]
+for x in l:
+    if (x>= 0):
+        g.append(x)
+    else:
+        h.append(x)
+g.sort(reverse=True)
+h.sort(reverse=True)
+for x in h:
+    g.append(x)
+print(g[1])
