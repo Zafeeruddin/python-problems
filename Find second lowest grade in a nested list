@@ -1,0 +1,46 @@
+b=[]
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    l=list((name,score))
+    b.append(l)
+def take(elem):
+    return elem[1]
+b.sort(key=take)
+y=b
+print(b)
+a=[]
+if y[0][1] == y[1][1]:
+    x=1
+    while y[x][1]==y[x+1][1]:
+        x=x+1
+    print(y[x+1][0])
+    if x+1==len(b)-1:
+        print(y[x+1][0])
+    elif y[x+1][1]!=y[x+2][1]:
+        print(y[x+1][0])
+    else:
+        while y[x+1][1]==y[x+2][1]:
+            a.append(y[x+1][0])
+            x=x+1
+        a.append(y[x+1][0])
+        a.sort()
+        for z in a:
+            print(z)
+
+elif y[1][1]!=y[2][1]:
+    print(y[1][0])
+else:
+    x=1
+    while y[x][1]==y[x+1][1]:
+        a.append(y[x][0])
+        if x+1 == len(b)-1:
+            a.append(y[x+1][0])
+            break
+        else:
+            a.append(y[x+1][0])
+            x=x+1
+    print(a)
+    a.sort()
+    for z in a:
+        print(z)
