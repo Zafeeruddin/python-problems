@@ -1,0 +1,25 @@
+s=str(input())
+y=str()
+m=str()
+n=str()
+t=str()
+o=str()
+for z in s:
+    if z.islower():
+        y=y+z
+    elif z.isupper():
+        m=m+z
+    else:
+        n=n+z
+p=''.join(sorted(y))
+q=''.join(sorted(m))
+for z in n:
+    if int(z)%2==0:
+        t=t+z
+    else:
+        o=o+z
+w=''.join(sorted(o))
+e=''.join(sorted(t))
+
+print(p+q+w+e)
+
