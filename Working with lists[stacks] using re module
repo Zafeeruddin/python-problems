@@ -1,0 +1,41 @@
+if __name__ == '__main__':
+    N = int(input())
+y=[]
+import re
+def inser(c):
+    numbers = [int(x) for x in re.findall(r'\d+', c)]
+    y.insert(numbers[0],numbers[1])
+def appen(c):
+    numbers = [int(x) for x in re.findall(r'\d+', c)]
+    y.append(numbers[0])
+def po():
+    y.pop()
+def revers():
+    y.reverse()
+def sor():
+    y.sort()
+def prin():
+    print(y)
+def remov(c):
+    numbers = [int(x) for x in re.findall(r'\d+', c)]
+    y.remove(numbers[0])
+
+
+while N!=0:
+    c=input()
+    if 'insert' in c:
+        inser(c)
+    elif 'append' in c:
+        appen(c)
+        
+    elif 'remove' in c:
+        remov(c)
+    elif 'sort' in c:
+        sor()
+    elif 'reverse' in c:
+        revers()
+    elif 'print' in c:
+        prin()
+    elif 'pop' in c:
+        po()
+    N=N-1
