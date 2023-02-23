@@ -1,0 +1,57 @@
+s=input()
+print(len(s))
+c=0
+while c!=len(s):
+    if s[c].isalnum():
+        print(True)
+        break
+    elif c==len(s)-1:
+        print(False)
+        break
+    else:
+        c=c+1
+        continue
+c=0
+while c!=len(s):
+    if s[c].isalpha():
+        print(True)
+        break
+    elif c==len(s)-1:
+        print(False)
+        break
+    else:
+        c=c+1
+        continue
+c=0
+while c!=len(s):
+    if s[c].isdigit():
+        print(True)
+        break
+    elif c==len(s)-1:
+        print(False)
+        break
+    else:
+        c=c+1
+        continue
+c=0
+while c!=len(s):
+    if s[c].islower():
+        print(True)
+        break
+    elif c==len(s)-1:
+        print(False)
+        break
+    else:
+        c=c+1
+        continue
+c=0
+while c!=len(s):
+    if s[c].isupper():
+        print(True)
+        break
+    elif c==len(s)-1:
+        print(False)
+        break
+    else:
+        c=c+1
+        continue
