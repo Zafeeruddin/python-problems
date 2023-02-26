@@ -1,0 +1,15 @@
+n,m=input().split()
+n,m=int(n),int(m)
+c=1
+while c<n:
+    f='.|.'*(c)
+    print(f.center(m,'-'))
+    c=c+2
+print('WELCOME'.center(m,'-'))
+c=int(n-2)
+
+while c>0:
+    f='.|.'*(c)
+    print(f.center(m,'-'))
+    c=c-2
+
