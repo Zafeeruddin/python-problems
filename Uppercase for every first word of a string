@@ -1,0 +1,12 @@
+s=input()
+y=s.split(" ")
+print(len(y))
+x=0
+z=str()
+while x!=len(y):
+    if x<1:
+        z=z+y[x].capitalize()
+    else:
+        z=z+" "+y[x].capitalize()
+    x+=1
+print(z)
