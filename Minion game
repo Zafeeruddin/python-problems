@@ -1,0 +1,24 @@
+def minion_game(s):
+    x=0
+    k=0
+    st=0
+    while x!=len(s)+1:
+        y=x+1
+        while y!=len(s)+1:
+            z=s[x:y]
+            if z[0]=='A' or z[0]=='E' or z[0]=='I' or z[0]=='O' or z[0]=='U':
+                k+=1
+            else:
+                st+=1
+            y+=1
+        x+=1
+    if st>k:
+        print('Stuart',st)
+    elif st==k:
+        print('Draw')
+    else:
+        print('Kevin',k)
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
