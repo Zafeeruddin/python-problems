@@ -1,0 +1,15 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    d=0
+    while d<len(string)+1:
+        c=string[d:k+d]
+        f=''
+        for x in c:
+            if x not in f:
+                f+=x
+        print(f)
+        d+=k
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
